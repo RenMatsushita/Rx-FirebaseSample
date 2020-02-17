@@ -1,0 +1,6 @@
+framework module Pods_Firebase_RxSwiftSample {
+  umbrella header "Pods-Firebase+RxSwiftSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

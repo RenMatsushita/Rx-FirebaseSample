@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up-->
+        <scene sceneID="PZX-iq-fDx">
+            <objects>
+                <viewController id="h3P-Aa-t7G" customClass="SignupViewController" customModule="Firebase_RxSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sva-Ds-RsM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ad-CG-K4v">
+                                <rect key="frame" x="40" y="278" width="334" height="47.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Ad-CG-K4v" secondAttribute="height" multiplier="7:1" id="fPX-96-p2R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-95-LwV">
+                                <rect key="frame" x="142" y="118" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qXA-95-LwV" secondAttribute="height" multiplier="1:1" id="FnH-Vu-QGr"/>
+                                    <constraint firstAttribute="height" constant="130" id="IRB-hD-idt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0tt-fY-8Fx" firstAttribute="trailing" secondItem="2Ad-CG-K4v" secondAttribute="trailing" constant="40" id="943-Ab-0q6"/>
+                            <constraint firstItem="2Ad-CG-K4v" firstAttribute="top" secondItem="qXA-95-LwV" secondAttribute="bottom" constant="30" id="IOk-9l-Vmv"/>
+                            <constraint firstItem="qXA-95-LwV" firstAttribute="centerX" secondItem="Sva-Ds-RsM" secondAttribute="centerX" id="Vdy-7d-SFB"/>
+                            <constraint firstItem="qXA-95-LwV" firstAttribute="top" secondItem="0tt-fY-8Fx" secondAttribute="top" constant="30" id="dn9-t7-AO7"/>
+                            <constraint firstItem="2Ad-CG-K4v" firstAttribute="leading" secondItem="0tt-fY-8Fx" secondAttribute="leading" constant="40" id="nu6-sW-oVf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0tt-fY-8Fx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="0lg-yh-51G">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="95x-FJ-w2c"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="95x-FJ-w2c" id="ZRb-tv-YaE"/>
+                        <outlet property="imageView" destination="qXA-95-LwV" id="YJv-sX-IqO"/>
+                        <outlet property="nameTextField" destination="2Ad-CG-K4v" id="mt3-y8-Uxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wy-dR-zr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.8985507246377" y="-194.19642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bhb-mo-5Wb">
+            <objects>
+                <navigationController storyboardIdentifier="Signup" automaticallyAdjustsScrollViewInsets="NO" id="xfC-CF-WQa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YpH-HQ-vRH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h3P-Aa-t7G" kind="relationship" relationship="rootViewController" id="p9l-Kh-ZpV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIE-yt-YtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="-194.19642857142856"/>
+        </scene>
+    </scenes>
+</document>

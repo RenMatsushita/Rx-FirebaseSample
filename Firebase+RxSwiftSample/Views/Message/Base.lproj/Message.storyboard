@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Message View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MessageViewController" customModule="Firebase_RxSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mOw-p5-UYk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="598.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TZy-pY-2ao">
+                                <rect key="frame" x="10" y="606.5" width="355" height="50.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWd-aJ-Que">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-uR-Qqc">
+                                        <rect key="frame" x="279" y="0.0" width="76" height="50.5"/>
+                                        <color key="backgroundColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jfm-uR-Qqc" secondAttribute="height" multiplier="3:2" id="TUr-zr-fRC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TZy-pY-2ao" secondAttribute="height" multiplier="7:1" id="XFs-tr-muq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mOw-p5-UYk" secondAttribute="trailing" id="9cc-eD-wFX"/>
+                            <constraint firstItem="TZy-pY-2ao" firstAttribute="top" secondItem="mOw-p5-UYk" secondAttribute="bottom" constant="8" symbolic="YES" id="IKS-WU-ynp"/>
+                            <constraint firstItem="TZy-pY-2ao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="TlN-nv-waY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TZy-pY-2ao" secondAttribute="trailing" constant="10" id="buW-D8-lxj"/>
+                            <constraint firstItem="mOw-p5-UYk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hCU-D2-8dm"/>
+                            <constraint firstItem="mOw-p5-UYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tuX-jP-8SW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TZy-pY-2ao" secondAttribute="bottom" constant="10" id="uzx-gN-gXy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTableView" destination="mOw-p5-UYk" id="akO-Ht-B3r"/>
+                        <outlet property="messageTextField" destination="NWd-aJ-Que" id="1wn-wo-JJ2"/>
+                        <outlet property="sendButton" destination="jfm-uR-Qqc" id="4DG-CU-Lg4"/>
+                        <outlet property="stackViewBottom" destination="uzx-gN-gXy" id="4Tj-fl-CkZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="123"/>
+        </scene>
+    </scenes>
+</document>
